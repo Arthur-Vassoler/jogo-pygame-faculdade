@@ -34,10 +34,10 @@ def game():
         time.sleep(3)
         playGame()
 
-    def dead(missile):
+    def dead(pockebola):
         pygame.mixer.Sound.play(colisao)
         pygame.mixer.music.stop()
-        alert_tela("Missile 1 " + missile + " atingiu você!!!")
+        alert_tela("pockebola 1 " + pockebola + " atingiu você!!!")
 
     def placar(desvios):
         font  = pygame.font.SysFont(None, 25)
@@ -53,11 +53,11 @@ def game():
         pikachu_largura   = 140
         movimentoX        = 0
 
-        missile_1 = pygame.image.load("assets/missile.png")
-        missile_2 = pygame.image.load("assets/missile.png")
-        missile_3 = pygame.image.load("assets/missile.png")
-        missile_4 = pygame.image.load("assets/missile.png")
-        missile_5 = pygame.image.load("assets/missile.png")
+        pockebola_1 = pygame.image.load("assets/pockebola.png")
+        pockebola_2 = pygame.image.load("assets/pockebola.png")
+        pockebola_3 = pygame.image.load("assets/pockebola.png")
+        pockebola_4 = pygame.image.load("assets/pockebola.png")
+        pockebola_5 = pygame.image.load("assets/pockebola.png")
 
         largura_a   = 57
         altura_a    = 65
@@ -114,7 +114,7 @@ def game():
 
             tela.blit(boneco_pikachu, (posicao_x_pikachu, posicao_y_pikachu))
 
-            tela.blit(missile_1, (xA, yA))
+            tela.blit(pockebola_1, (xA, yA))
             yA = yA + velocidadeA
             if yA > altura_tela:
                 yA           = -200
@@ -122,7 +122,7 @@ def game():
                 xA           = random.randrange(0, largura_tela)
                 desvios     += 1
 
-            tela.blit(missile_2, (xE, yE))
+            tela.blit(pockebola_2, (xE, yE))
             yE = yE + velocidadeE
             if yE > altura_tela:
                 yE           = -200
@@ -130,7 +130,7 @@ def game():
                 xE           = random.randrange(0, largura_tela)
                 desvios     += 1
 
-            tela.blit(missile_3, (xI, yI))
+            tela.blit(pockebola_3, (xI, yI))
             
             yI = yI + velocidadeI
             if yI > altura_tela:
@@ -139,7 +139,7 @@ def game():
                 xI           = random.randrange(0, largura_tela)
                 desvios     += 1
 
-            tela.blit(missile_4, (xO, yO))
+            tela.blit(pockebola_4, (xO, yO))
             
             yO = yO + velocidadeO
             if yO > altura_tela:
@@ -148,7 +148,7 @@ def game():
                 xO           = random.randrange(0, largura_tela - 50)
                 desvios     += 1
 
-            tela.blit(missile_5, (xU, yU))
+            tela.blit(pockebola_5, (xU, yU))
             
             yU = yU + velocidadeU
             if yU > altura_tela:
